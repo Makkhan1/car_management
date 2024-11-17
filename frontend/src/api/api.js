@@ -1,8 +1,10 @@
 import axios from 'axios';
 
 
+const url = "https://car-management-1-cskg.onrender.com"
+
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_BASE_URL || `${url}/api`,
 });
 
 
@@ -12,7 +14,7 @@ const API = axios.create({
 
 export const signup = async (userData) => {
   try {
-    const response = await API.post('http://localhost:5000/api/auth/signup', userData);
+    const response = await API.post(`${url}/api/auth/signup`, userData);
     return response.data;
   } catch (error) {
     throw error.response?.data || 'Error signing up';
@@ -23,7 +25,7 @@ export const login = async (userData) => {
   try {
     console.log("login ka function call hua :");
     
-    const response = await API.post('http://localhost:5000/api/auth/login', userData);
+    const response = await API.post(`${url}/api/auth/login`, userData);
 
     console.log('login ke baad wala response : ' , response.data.token);
 
@@ -51,7 +53,7 @@ console.log('token in getCars : ' , token) ;
     }
 
 
-    const response = await API.get('http://localhost:5000/api/cars', {
+    const response = await API.get(`${url}/api/cars`, {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -74,7 +76,7 @@ const token = localStorage.getItem('token');
 console.log('token in getCars : ' , token) ;
 
 
-    const response = await API.get(`http://localhost:5000/api/cars/${carId}` , {
+    const response = await API.get(`${url}/api/cars/${carId}` , {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -93,7 +95,7 @@ const token = localStorage.getItem('token');
 console.log('token in getCars : ' , token) ;
 
 
-    const response = await API.post('http://localhost:5000/api/cars', carData , {
+    const response = await API.post(`${url}/api/cars`, carData , {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -112,7 +114,7 @@ const token = localStorage.getItem('token');
 console.log('token in getCars : ' , token) ;
 
 
-    const response = await API.put(`http://localhost:5000/api/cars/${carId}` , carData , {
+    const response = await API.put(`${url}/api/cars/${carId}` , carData , {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -131,7 +133,7 @@ const token = localStorage.getItem('token');
 console.log('token in getCars : ' , token) ;
 
 
-    const response = await API.delete(`http://localhost:5000/api/cars/${carId}`, {
+    const response = await API.delete(`${url}/api/cars/${carId}`, {
       headers: {
         authorization: `Bearer ${token}`,
       },
