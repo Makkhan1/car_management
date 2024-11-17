@@ -1,0 +1,98 @@
+
+.car-card {
+  width: 300px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+
+.car-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-bottom: 2px solid #ddd;
+}
+
+
+.car-card-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+
+.car-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+
+.car-card-description {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+
+.car-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.car-tag {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.no-tags {
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+
+
+.car-card-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #8db3dc;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.car-card-link:hover {
+  background-color: #d83d3d;
+}

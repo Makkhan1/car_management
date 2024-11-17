@@ -1,0 +1,88 @@
+
+.car-form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+ 
+  .car-form-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+
+  .car-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+
+  .form-input,
+  .form-textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #007bff;
+  }
+  
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+
+  @media (max-width: 768px) {
+    .car-form-container {
+      margin: 20px;
+      padding: 15px;
+    }
+  
+    .car-form-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-input,
+    .form-textarea {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+  
